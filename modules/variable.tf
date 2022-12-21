@@ -12,11 +12,19 @@ variable "bucket_tags" {
   default = {
   }
 }
-variable "key" {
+variable "key1" {
   type    = string
   default = ""
 }
-variable "local_path" {
+variable "local_path1" {
+  type    = string
+  default = ""
+}
+variable "key2" {
+  type    = string
+  default = ""
+}
+variable "local_path2" {
   type    = string
   default = ""
 }

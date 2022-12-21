@@ -19,8 +19,15 @@ resource "aws_s3_bucket_website_configuration" "mys3web" {
 resource "aws_s3_bucket_object" "index_object" {
   depends_on = [aws_s3_bucket.my_bucket]
   bucket = "${var.bucket_name}"
-  key    = var.key
-  source = var.local_path
+  key    = var.key1
+  source = var.local_path1
+  content_type = var.content_type
+}
+resource "aws_s3_bucket_object" "error_object" {
+  depends_on = [aws_s3_bucket.my_bucket]
+  bucket = "${var.bucket_name}"
+  key    = var.key2
+  source = var.local_path2
   content_type = var.content_type
 }
 resource "aws_s3_bucket_policy" "mybs" {

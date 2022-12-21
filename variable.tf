@@ -14,15 +14,23 @@ variable "bucket_tags" {
     name1       = "BALAJI"
   }
 }
-variable "key" {
-  type = string
+variable "key1" {
+  type    = string
   default = "index.html"
 }
-variable "local_path" {
-  type = string
+variable "local_path1" {
+  type    = string
   default = "./index.html"
 }
+variable "key2" {
+  type    = string
+  default = "error.html"
+}
+variable "local_path2" {
+  type    = string
+  default = "./error.html"
+}
 variable "content_type" {
-  type = string
+  type    = string
   default = "text/html"
 }
